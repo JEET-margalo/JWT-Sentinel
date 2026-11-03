@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Weak secret + admin claim",
+    "hint": "HS256 signed with a wordlist secret, carrying role=admin. Watch it crack.",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMDI0IiwibmFtZSI6IkpvcmRhbiBMZWUiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3ODYwNjE1OTksImV4cCI6MTgyMDYyMTU5OX0.csybLl56VMY38qHJZOhGdjWk3W64bQGZhsDu8WV7KVM"
+  },
+  {
+    "label": "alg: none",
+    "hint": "No signature at all \u2014 the classic auth bypass.",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJzdWIiOiIxIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3ODYwNjE1OTl9."
+  },
+  {
+    "label": "Expired token",
+    "hint": "Well-signed but past its exp. A correct server rejects it.",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3NyIsImVtYWlsIjoidXNlckBleGFtcGxlLmNvbSIsImF1ZCI6ImJpbGxpbmctYXBpIiwiaXNzIjoiaHR0cHM6Ly9pZC5leGFtcGxlLmNvbSIsImlhdCI6MTc4MzQ2OTU5OSwiZXhwIjoxNzgzNDczMTk5fQ.eOUsn_45dpu_Q60H3QDc43fs3mMiHE-SN3bTjnKTM0I"
+  },
+  {
+    "label": "No expiry, no audience",
+    "hint": "Strong secret, but the token never expires and can be replayed anywhere.",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MDAxIiwic2NvcGUiOiJyZWFkIHdyaXRlIiwiaWF0IjoxNzg2MDYxNTk5fQ.yqyIhFKI-ZVMdG-PKu9saR28p6IMXPvYfhLlaol9_4ZuPHD29F74rOVaeI_EzEEBGEUPKG0WciYzUsocCr7XFw"
+  },
+  {
+    "label": "Healthy token",
+    "hint": "Strong secret, short-lived, scoped audience and issuer. Little to flag.",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0MiIsImF1ZCI6Im9yZGVycy1hcGkiLCJpc3MiOiJodHRwczovL2lkLmV4YW1wbGUuY29tIiwiaWF0IjoxNzg2MDYxNTk5LCJuYmYiOjE3ODYwNjE1OTksImV4cCI6MTc4NjA2MjQ5OSwianRpIjoiYjFmOWMyIn0.6kh5fSFXqkZTIGQE46XiRlLcfdoLESmFXYEALLUdrpo"
+  }
+]

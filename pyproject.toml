@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jwtsentinel"
+version = "1.0.0"
+description = "A from-scratch JWT inspection, weak-secret cracking and forging toolkit - standard library only."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Nikhil Sankhla" }]
+keywords = ["jwt", "jws", "security", "hmac", "token", "pentest", "appsec"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6", "hypothesis>=6.82"]
+
+[project.scripts]
+jwtsentinel = "jwtsentinel.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["jwtsentinel*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
